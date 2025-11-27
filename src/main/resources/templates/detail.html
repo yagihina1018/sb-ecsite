@@ -40,7 +40,7 @@
 
       <!-- (商品画像 開始) -->
       <div class="product-detail-image">
-		<!--【Ｑ１】product（商品1件） から更に productImagePath の値を取得 -->
+		<!-- product（商品1件） から更に productImagePath の値を取得 -->
         <img th:src="@{${product.productImagePath}}">
       </div>
       <!-- (商品画像 終了) -->
@@ -48,20 +48,20 @@
       <!-- (商品の内容 開始) -->
       <div class="detail-container-inner">
 
-        <!--【Ｑ２】product（商品1件） から更に categoryName の値を取得 -->
+        <!-- product（商品1件） から更に categoryName の値を取得 -->
         <div th:text="${product.categoryName}" class="common-tag"></div>
 
-        <!--【Ｑ３】product（商品1件） から更に productName の値を取得 -->
+        <!-- product（商品1件） から更に productName の値を取得 -->
         <div th:text="${product.productName}" class="product-detail-name"></div>
 
-        <!--【Ｑ４】product（商品1件） から更に productPrice の値を取得 -->
+        <!-- product（商品1件） から更に productPrice の値を取得 -->
         <div th:text="${product.productPrice}" class="product-detail-price format-price"></div>
         
-        <!--【Ｑ５】product（商品1件） から更に productDescription の値を取得 -->
+        <!-- product（商品1件） から更に productDescription の値を取得 -->
         <div th:text="${product.productDescription}" class="product-detail-description"></div>
         
         <!-- (商品数量指定フォーム 開始) -->
-        <!--【Ｑ６】値の送信先URLとして「http://localhost:8080/ecsite/order」を指定 -->
+        <!-- 値の送信先URLとして「http://localhost:8080/ecsite/order」を指定 -->
         <form action="/ecsite/order" class="count-container">
 
           <!-- (注文する商品の数量入力エリア 開始) -->
@@ -77,7 +77,7 @@
           </div>
           <!-- (注文する商品の数量入力エリア 終了) -->
 
-          <!--【Ｑ７】注文に必要なパラメータ(商品ID)を非表示で送信 -->
+          <!-- 注文に必要なパラメータ(商品ID)を非表示で送信 -->
           <input type="hidden" name="productId" th:value="${product.productId}">
 
           <!-- (注文を確定して送信するボタン) -->
